@@ -194,4 +194,17 @@ forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
     [self.accessoryDelegate messageView:self didTapAccessoryButtonAtIndexPath:indexPath];
 }
 
+-(void) layoutSubviews
+{
+    [super layoutSubviews];
+    
+    if (self.contentOffsetBottomOverride > 0.1)
+    {
+        CGFloat yoffset = self.contentSize.height - self.contentOffsetBottomOverride;
+        if (yoffset > 0)
+        {
+            self.contentOffset = CGPointMake(0, yoffset);
+        }
+    }
+}
 @end

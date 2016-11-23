@@ -85,6 +85,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic) UIColor *loadEarlierMessagesHeaderTextColor;
 
+
+/**
+ *  The offset that keep the scrollview fixed from the bottom
+ */
+@property (assign, nonatomic) CGFloat contentOffsetBottomOverride;
+
 /**
  *  Returns a `JSQMessagesTypingIndicatorFooterView` object for the specified index path
  *  that is configured using the collection view's properties:
